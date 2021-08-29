@@ -1,0 +1,46 @@
+_________________________________________________________________________________________________________________________________________________
+Final NFL 2020 through games of 2021 February 7 Sunday - SUPER BOWL - Final Ratings                                                             
+                                RATING    W   L   T  SCHEDL(RANK) VS top 10 | VS top 16 |  PREDICTOR   | GOLDEN_MEAN  |  RECENT    
+                HOME ADVANTAGE=[  0.36]                                                   [  0.36]       [  0.38]       [  0.36]
+   1  Tampa Bay Buccaneers    =  28.30   15   5   0   21.23(   6)   4  4  0 |   5  4  0 |   28.03    1 |   27.44    2 |   30.82    1  (NFC SOUTH)
+   2  Kansas City Chiefs      =  27.13   16   3   0   20.87(   8)   5  1  0 |   8  2  0 |   27.10    2 |   28.01    1 |   26.38    4  (afc west)
+   3  New Orleans Saints      =  26.47   13   5   0   20.68(  12)   2  3  0 |   4  3  0 |   26.71    4 |   27.00    3 |   25.71    5  (NFC SOUTH)
+   4  Buffalo Bills           =  26.07   15   4   0   20.79(  10)   5  2  0 |   9  4  0 |   25.54    6 |   26.02    4 |   26.91    2  (afc east)
+   5  Green Bay Packers       =  25.93   14   4   0   19.49(  26)   2  3  0 |   4  3  0 |   25.76    5 |   25.58    6 |   26.64    3  (NFC NORTH)
+   6  Baltimore Ravens        =  25.45   12   6   0   19.35(  28)   1  4  0 |   4  5  0 |   26.74    3 |   25.64    5 |   24.18    6  (afc north)
+   7  Seattle Seahawks        =  23.46   12   5   0   19.87(  20)   1  3  0 |   5  4  0 |   23.62    8 |   24.18    7 |   22.55    9  (NFC WEST)
+   8  Los Angeles Rams        =  23.39   11   7   0   20.80(   9)   3  3  0 |   5  6  0 |   23.82    7 |   23.19    9 |   23.12    8  (NFC WEST)
+   9  Indianapolis Colts      =  22.27   11   6   0   18.30(  32)   1  3  0 |   2  5  0 |   22.56   10 |   22.13   10 |   22.09   11  (afc south)
+  10  Pittsburgh Steelers     =  21.93   12   5   0   19.03(  31)   3  1  0 |   5  3  0 |   23.38    9 |   23.24    8 |   19.15   18  (afc north)
+Final NFL 2020 through games of 2021 February 7 Sunday - SUPER BOWL - Final Ratings                                                             
+                                RATING    W   L   T  SCHEDL(RANK) VS top 10 | VS top 16 |  PREDICTOR   | GOLDEN_MEAN  |  RECENT    
+                HOME ADVANTAGE=[  0.36]                                                   [  0.36]       [  0.38]       [  0.36]
+  11  Miami Dolphins          =  21.13   10   6   0   19.52(  25)   1  4  0 |   4  4  0 |   20.94   13 |   20.37   14 |   22.30   10  (afc east)
+  12  Tennessee Titans        =  21.12   11   6   0   19.05(  30)   3  4  0 |   3  5  0 |   20.89   14 |   21.81   11 |   20.61   13  (afc south)
+  13  Cleveland Browns        =  20.73   12   6   0   19.12(  29)   3  4  0 |   4  4  0 |   19.65   15 |   21.14   12 |   21.55   12  (afc north)
+  14  San Francisco 49ers     =  20.43    6  10   0   21.07(   7)   2  5  0 |   3  7  0 |   21.26   11 |   20.97   13 |   18.84   19  (NFC WEST)
+  15  Arizona Cardinals       =  19.97    8   8   0   19.77(  22)   2  3  0 |   3  5  0 |   21.04   12 |   20.09   15 |   18.55   20  (NFC WEST)
+  16  Los Angeles Chargers    =  19.79    7   9   0   20.06(  17)   1  4  0 |   1  5  0 |   18.27   21 |   18.52   21 |   23.20    7  (afc west)
+  17  New England Patriots    =  19.51    7   9   0   20.73(  11)   1  5  0 |   4  7  0 |   19.28   16 |   19.84   16 |   19.37   16  (afc east)
+  18  Atlanta Falcons         =  19.20    4  12   0   21.63(   1)   0  7  0 |   0  8  0 |   19.16   17 |   18.55   20 |   19.97   14  (NFC SOUTH)
+  19  Chicago Bears           =  18.94    8   9   0   20.29(  15)   1  6  0 |   1  7  0 |   18.86   20 |   18.81   19 |   19.17   17  (NFC NORTH)
+  20  Las Vegas Raiders       =  18.81    8   8   0   21.36(   5)   2  4  0 |   4  6  0 |   18.91   19 |   19.55   17 |   17.77   24  (afc west)
+Final NFL 2020 through games of 2021 February 7 Sunday - SUPER BOWL - Final Ratings                                                             
+                                RATING    W   L   T  SCHEDL(RANK) VS top 10 | VS top 16 |  PREDICTOR   | GOLDEN_MEAN  |  RECENT    
+                HOME ADVANTAGE=[  0.36]                                                   [  0.36]       [  0.38]       [  0.36]
+  21  Minnesota Vikings       =  18.61    7   9   0   19.99(  18)   1  5  0 |   1  6  0 |   18.95   18 |   19.11   18 |   17.56   25  (NFC NORTH)
+  22  Dallas Cowboys          =  18.15    6  10   0   19.44(  27)   0  4  0 |   1  6  0 |   18.06   22 |   18.18   22 |   18.20   22  (NFC EAST)
+  23  Washington Redskins     =  18.09    7  10   0   19.56(  24)   1  4  0 |   2  6  0 |   17.67   24 |   17.27   24 |   19.40   15  (NFC EAST)
+  24  Carolina Panthers       =  17.60    5  11   0   21.59(   3)   0  6  0 |   2  6  0 |   17.57   25 |   16.83   26 |   18.46   21  (NFC SOUTH)
+  25  Denver Broncos          =  16.96    5  11   0   21.59(   4)   0  6  0 |   2  8  0 |   16.40   26 |   17.04   25 |   17.47   26  (afc west)
+  26  Philadelphia Eagles     =  16.93    4  11   1   20.53(  13)   1  5  0 |   2  7  0 |   17.84   23 |   17.43   23 |   14.82   28  (NFC EAST)
+  27  New York Giants         =  16.79    6  10   0   20.17(  16)   1  4  0 |   1  7  0 |   16.28   27 |   16.14   27 |   17.96   23  (NFC EAST)
+  28  Houston Texans          =  15.21    4  12   0   19.72(  23)   0  6  0 |   0  9  0 |   16.09   28 |   15.47   28 |   13.37   31  (afc south)
+  29  Cincinnati Bengals      =  14.87    4  11   1   19.78(  21)   1  4  0 |   2  8  0 |   13.96   30 |   14.42   30 |   16.11   27  (afc north)
+  30  Detroit Lions           =  14.29    5  11   0   20.31(  14)   0  5  0 |   1  6  0 |   14.37   29 |   14.68   29 |   13.63   30  (NFC NORTH)
+Final NFL 2020 through games of 2021 February 7 Sunday - SUPER BOWL - Final Ratings                                                             
+                                RATING    W   L   T  SCHEDL(RANK) VS top 10 | VS top 16 |  PREDICTOR   | GOLDEN_MEAN  |  RECENT    
+                HOME ADVANTAGE=[  0.36]                                                   [  0.36]       [  0.38]       [  0.36]
+  31  New York Jets           =  13.00    2  14   0   21.62(   2)   1  5  0 |   2 10  0 |   11.57   31 |   12.42   31 |   14.50   29  (afc east)
+  32  Jacksonville Jaguars    =   9.47    1  15   0   19.94(  19)   1  4  0 |   1  9  0 |    9.71   32 |    8.92   32 |    9.70   32  (afc south)
+_________________________________________________________________________________________________________________________________________________
