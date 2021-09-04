@@ -1,4 +1,3 @@
-
 export interface TeamRatings {
   avg: number;
   predictor: number;
