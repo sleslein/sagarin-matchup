@@ -6,11 +6,14 @@ will win.
 ## Todos
 
 - [ ] Logic Related
-  - [ ] Parse home advantage
-  - [ ] Parse team data
+  - [x] Sag Scraper
+  - [x] Sag Parser
+    - [X] Parse home advantage
+    - [X] Parse team data
+  - [ ] compose app
   - [ ] Add command to predict week
   - [ ] Write results to file
 
 - [ ] Data Related
-  - [ ] Complete `teamsList.ts`
+  - [x] Complete `teamsList.ts`
   - [ ] Pull weekly schedule from web
