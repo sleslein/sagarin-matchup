@@ -8,8 +8,8 @@ will win.
 - [ ] Logic Related
   - [x] Sag Scraper
   - [x] Sag Parser
-    - [X] Parse home advantage
-    - [X] Parse team data
+    - [x] Parse home advantage
+    - [x] Parse team data
   - [ ] compose app
   - [ ] Add command to predict week
   - [ ] Write results to file

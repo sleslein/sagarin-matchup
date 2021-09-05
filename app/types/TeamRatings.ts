@@ -1,4 +1,4 @@
-export interface TeamRatings {
+export interface SagarinRating {
   avg: number;
   predictor: number;
   goldenMean: number;
