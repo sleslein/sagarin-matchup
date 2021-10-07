@@ -16,4 +16,14 @@ will win.
 
 - [ ] Data Related
   - [x] Complete `teamsList.ts`
-  - [ ] Pull weekly schedule from web
+  - [x] Pull weekly schedule from web
+
+## CLI interface'
+
+- scrape-schedule scrapes schedule and saved schedule.json
+
+- scrape-sag inputs -w Week number scrapes sag sch and saves to json names file
+  based on week number
+
+- gen-picks -w Week Number scrapes sag ratings and generates pics based on sag
+  ratings Saves results to file and console
