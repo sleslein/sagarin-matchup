@@ -1,4 +1,4 @@
-import { teamList } from "../data/teams.ts";
+import { teamList, TeamNameMap } from "../data/teams.ts";
 import { SagarinRating, TeamInfo, TeamRecord } from "./types/index.ts";
 import { WeeklyRatings } from "./types/SagarinRatings.ts";
 
@@ -12,7 +12,13 @@ export function isTeamLine(text: string, teamList: string[]): boolean {
 }
 
 export function parseToTeamInfo(line: string): TeamInfo {
-  const teamName = parseToTeamName(line);
+  const longTeamName = parseToTeamName(line);
+  const teamName = TeamNameMap.get(longTeamName);
+
+  if (!teamName) {
+    throw new Error(`unable to parse/find team name: ${longTeamName}`);
+  }
+
   const ratings = parseToRatings(line);
   const record = parseToTeamRecord(line);
   const division = parseToDivisionName(line);
