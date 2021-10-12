@@ -1,4 +1,5 @@
 import { parse } from "https://deno.land/std@0.108.0/flags/mod.ts";
+import { brightGreen as hightlight } from "https://deno.land/std@0.110.0/fmt/colors.ts";
 import { fetchSagRatings } from "./sag-scraper.ts";
 import { parseSagRatings } from "./sagParser.ts";
 import { GamePrediction } from "./types/GamePrediction.ts";
@@ -18,6 +19,25 @@ async function loadSchedule(): Promise<WeeklySchedule[]> {
     console.error(`Unable to load schdule: ${err}`);
     return [];
   }
+}
+
+function logPredictions(predictions: GamePrediction[]): void {
+  console.log(`PTS AWAY @ HOME SCORE`);
+  console.log(`--- ---- @ ---- -----`);
+
+  predictions.forEach((x, idx) => {
+    const pts = (predictions.length - idx).toString().padEnd(3, ' ');
+    const away = x.away.padEnd(4, ' ');
+    const home = x.home.padEnd(4, ' ');
+    if (x.predictedWinner === x.home) {
+      console.log(`${pts} ${away} @ ${hightlight(home)} ${x.calcScore}`);
+
+    } else {
+    console.log(`${pts} ${hightlight(away)} @ ${home} ${x.calcScore}`);
+
+    }
+  });
+
 }
 
 async function main(args: AutoPickArgs): Promise<void> {
@@ -82,6 +102,7 @@ async function main(args: AutoPickArgs): Promise<void> {
   console.info(`Saved predictions: ${predictionsFileName}`);
 
   // write winners to console
+  logPredictions(predictions);
 }
 
 const args = parse(Deno.args, { alias: { "week": "w" } }) as AutoPickArgs;
