@@ -26,18 +26,15 @@ function logPredictions(predictions: GamePrediction[]): void {
   console.log(`--- ---- @ ---- -----`);
 
   predictions.forEach((x, idx) => {
-    const pts = (predictions.length - idx).toString().padEnd(3, ' ');
-    const away = x.away.padEnd(4, ' ');
-    const home = x.home.padEnd(4, ' ');
+    const pts = (predictions.length - idx).toString().padEnd(3, " ");
+    const away = x.away.padEnd(4, " ");
+    const home = x.home.padEnd(4, " ");
     if (x.predictedWinner === x.home) {
       console.log(`${pts} ${away} @ ${hightlight(home)} ${x.calcScore}`);
-
     } else {
-    console.log(`${pts} ${hightlight(away)} @ ${home} ${x.calcScore}`);
-
+      console.log(`${pts} ${hightlight(away)} @ ${home} ${x.calcScore}`);
     }
   });
-
 }
 
 async function main(args: AutoPickArgs): Promise<void> {
@@ -63,7 +60,9 @@ async function main(args: AutoPickArgs): Promise<void> {
   }
 
   // for each game in schedule for week
-  const predictions: GamePrediction[] = weeklySchedule.games.filter((x) => x.away !== 'BYE').map((g) => {
+  const predictions: GamePrediction[] = weeklySchedule.games.filter((x) =>
+    x.away !== "BYE"
+  ).map((g) => {
     const homeRatings = ratings.teamRatings.find((x) => x.teamName === g.home);
     if (!homeRatings) {
       throw new Error(`unable to find ratings for ${g.home}`);
