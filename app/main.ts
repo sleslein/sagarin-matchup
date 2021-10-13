@@ -63,7 +63,7 @@ async function main(args: AutoPickArgs): Promise<void> {
   }
 
   // for each game in schedule for week
-  const predictions: GamePrediction[] = weeklySchedule.games.map((g) => {
+  const predictions: GamePrediction[] = weeklySchedule.games.filter((x) => x.away !== 'BYE').map((g) => {
     const homeRatings = ratings.teamRatings.find((x) => x.teamName === g.home);
     if (!homeRatings) {
       throw new Error(`unable to find ratings for ${g.home}`);
