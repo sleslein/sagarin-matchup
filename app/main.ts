@@ -3,17 +3,22 @@ import { brightGreen as hightlight } from "https://deno.land/std@0.110.0/fmt/col
 import { fetchSagRatings } from "./sag-scraper.ts";
 import { parseSagRatings } from "./sagParser.ts";
 import { GamePrediction } from "./types/GamePrediction.ts";
+import { WeeklyRatings } from "./types/SagarinRatings.ts";
 import { WeeklySchedule } from "./types/WeeklySchedule.ts";
 
 export interface AutoPickArgs {
   week?: number;
+  verbose?: boolean;
+  log?: boolean;
 }
 
-async function loadSchedule(): Promise<WeeklySchedule[]> {
+async function loadSchedule(verbose?: boolean): Promise<WeeklySchedule[]> {
   try {
     const json = await Deno.readTextFile("./data/schedule.json");
     const schedule = JSON.parse(json) as WeeklySchedule[];
-    console.info(`Loaded Schedule! ${schedule.length} weeks`);
+    if (verbose) {
+      console.info(`Loaded Schedule! ${schedule.length} weeks`);
+    }
     return schedule;
   } catch (err) {
     console.error(`Unable to load schdule: ${err}`);
@@ -21,7 +26,7 @@ async function loadSchedule(): Promise<WeeklySchedule[]> {
   }
 }
 
-function logPredictions(predictions: GamePrediction[]): void {
+function outputPredictions(predictions: GamePrediction[]): void {
   console.log(`PTS AWAY @ HOME SCORE`);
   console.log(`--- ---- @ ---- -----`);
 
@@ -37,29 +42,10 @@ function logPredictions(predictions: GamePrediction[]): void {
   });
 }
 
-async function main(args: AutoPickArgs): Promise<void> {
-  const { week } = args;
-  if (!week) {
-    throw new Error("must supply week agrument");
-  }
-
-  // Fetch and parse sagarain ratings
-  const sagRatings: string = await fetchSagRatings({ week });
-  const ratings = parseSagRatings(sagRatings);
-  console.info("Parsed Ratings");
-  const ratingsJson = JSON.stringify(ratings);
-  const ratingsFileName = `./data/sag-ratings-${week}.json`;
-  await Deno.writeTextFile(ratingsFileName, ratingsJson);
-  console.info(`Saved Ratings Content: ${ratingsFileName}`);
-
-  // Load schedules
-  const schedule = await loadSchedule();
-  const weeklySchedule = schedule.find((x) => x.week === week);
-  if (!weeklySchedule) {
-    throw Error(`Unable to find Week ${week} games in the schedule`);
-  }
-
-  // for each game in schedule for week
+function createPredictions(
+  weeklySchedule: WeeklySchedule,
+  ratings: WeeklyRatings,
+): GamePrediction[] {
   const predictions: GamePrediction[] = weeklySchedule.games.filter((x) =>
     x.away !== "BYE"
   ).map((g) => {
@@ -86,23 +72,65 @@ async function main(args: AutoPickArgs): Promise<void> {
 
     return result;
   });
-  console.info(`Completed predictions`);
-
-  // calculate the winners
-  // sort winners
   predictions.sort((a: GamePrediction, b: GamePrediction): number => {
     return (Math.abs(a.calcScore) > Math.abs(b.calcScore)) ? -1 : 1;
   });
-
-  // write winners to file
-  const predictionsJson = JSON.stringify(predictions);
-  const predictionsFileName = `./data/predictions-${week}.json`;
-  await Deno.writeTextFile(predictionsFileName, predictionsJson);
-  console.info(`Saved predictions: ${predictionsFileName}`);
-
-  // write winners to console
-  logPredictions(predictions);
+  return predictions;
 }
 
-const args = parse(Deno.args, { alias: { "week": "w" } }) as AutoPickArgs;
-await main(args);
+async function main(args: AutoPickArgs): Promise<GamePrediction[]> {
+  const { week, verbose, log } = args;
+  if (!week) {
+    throw new Error("must supply week agrument");
+  }
+
+  // Fetch and parse sagarain ratings
+  const sagRatings: string = await fetchSagRatings({ week, verbose, log });
+  const ratings = parseSagRatings(sagRatings);
+
+  if (verbose) {
+    console.info("Parsed Ratings");
+  }
+
+  if (log) {
+    const ratingsJson = JSON.stringify(ratings);
+    const ratingsFileName = `./data/sag-ratings-${week}.json`;
+    await Deno.writeTextFile(ratingsFileName, ratingsJson);
+    console.info(`Saved Ratings Content: ${ratingsFileName}`);
+  }
+
+  // Load schedules
+  const schedule = await loadSchedule();
+  const weeklySchedule = schedule.find((x) => x.week === week);
+  if (!weeklySchedule) {
+    throw Error(`Unable to find Week ${week} games in the schedule`);
+  }
+
+  const predictions = createPredictions(weeklySchedule, ratings);
+
+  return predictions;
+}
+
+try {
+  const args = parse(Deno.args, {
+    alias: { "week": "w", "verbose": "v", "log": "l" },
+  }) as AutoPickArgs;
+  const predictions = await main(args);
+
+  // write winners to file
+  if (args.log) {
+    const predictionsJson = JSON.stringify(predictions);
+    const predictionsFileName = `./data/predictions-${args.week}.json`;
+    await Deno.writeTextFile(predictionsFileName, predictionsJson);
+
+    if (args.verbose) {
+      console.info(`Saved predictions: ${predictionsFileName}`);
+    }
+  }
+
+  // write winners to console
+  outputPredictions(predictions);
+} catch (error) {
+  const { message } = error as Error;
+  console.log(message);
+}
