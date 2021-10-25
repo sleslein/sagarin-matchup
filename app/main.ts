@@ -86,6 +86,12 @@ async function main(args: AutoPickArgs): Promise<GamePrediction[]> {
 
   // Fetch and parse sagarain ratings
   const sagRatings: string = await fetchSagRatings({ week, verbose, log });
+  if (log) {
+    const fileName = `./data/sag-ratings-${week}.txt`;
+    await Deno.writeTextFile(fileName, sagRatings);
+    if (verbose) console.info(`Saved Ratings Content: ${fileName}`);
+  }
+
   const ratings = parseSagRatings(sagRatings);
 
   if (verbose) {

@@ -16,19 +16,13 @@ async function fetchHtml(verbose?: boolean): Promise<string> {
 }
 
 export async function fetchSagRatings(args: SagScraperArgs): Promise<string> {
-  const { week, verbose, log } = args;
-  if (!week) {
-    throw new Error("must supply week agrument");
-  }
+  const { verbose } = args;
 
   const html = await fetchHtml(verbose);
   const ratingsContent = getRatingsContent(html);
-  if (log) {
-    const fileName = `./data/sag-ratings-${week}.txt`;
-    await Deno.writeTextFile(fileName, ratingsContent);
-    if (verbose) console.info(`Saved Ratings Content: ${fileName}`);
+  if (verbose) {
+    console.info("Trimmed Ratings");
   }
-
   return ratingsContent;
 }
 

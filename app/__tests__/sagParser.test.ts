@@ -12,6 +12,19 @@ const teamLineText =
 const homeAdvLineText =
   "                HOME ADVANTAGE=[  2.49]                                                   [  2.49]       [  2.49]       [  2.49]";
 
+  const weekLine = "NFL 2021 through games of 2021 October 18 Monday - Week 6";
+
+Deno.test("isWeekLine", () => {
+  const result = sagParser.isWeekLine(weekLine);
+  assert(result === true);
+})
+
+Deno.test("parseWeekLine", () => {
+  const result = sagParser.parseWeekLine(weekLine);
+  console.log("result! - " + result);
+  assert(result === 6);
+});
+
 Deno.test("isAdvLine", () => {
   const result = sagParser.isAdvLine(homeAdvLineText);
   assert(result === true);
@@ -79,6 +92,7 @@ Deno.test("parseSagRatings given valid file returns homeAdvantage and 32 teams",
     recent: .36,
   };
 
+  assertEquals(result.week, 6);
   assertEquals(result.homeAdvantage, expectedHomeAdv);
   assertEquals(result.teamRatings.length, 32);
 });

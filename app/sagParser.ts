@@ -6,6 +6,16 @@ export function isAdvLine(text: string): boolean {
   return text.indexOf("HOME ADVANTAGE=[") > -1;
 }
 
+export function isWeekLine(text: string): boolean {
+  return text.indexOf("- Week ") > -1;
+}
+
+function parseWeekLine(text: string): number {
+  const weekLocation = text.indexOf("- Week ");
+  const value = text.substring(weekLocation+7);
+  return parseInt(value, 10);
+}
+
 export function isTeamLine(text: string, teamList: string[]): boolean {
   const teamName = parseToTeamName(text);
   return teamList.includes(teamName);
@@ -80,11 +90,16 @@ export function parseToTeamRecord(line: string): TeamRecord {
 export function parseSagRatings(text: string): WeeklyRatings {
   const records: string[] = text.split("\n");
   const result: WeeklyRatings = {
+    week: 0,
     homeAdvantage: { predictor: 0, avg: 0, recent: 0, goldenMean: 0 },
     teamRatings: [],
   };
 
   records.forEach((r) => {
+    if(isWeekLine(r)) {
+      result.week = parseWeekLine(r);
+    }
+    
     if (isAdvLine(r)) {
       result.homeAdvantage = parseToRatings(r);
       return;
@@ -100,6 +115,7 @@ export function parseSagRatings(text: string): WeeklyRatings {
 }
 
 export const sagParser = {
+  isWeekLine,
   isAdvLine,
   isTeamLine,
   parseToTeamName,
@@ -108,4 +124,5 @@ export const sagParser = {
   parseToRatings,
   parseSagRatings,
   parseToDivisionName,
+  parseWeekLine
 };

@@ -1,5 +1,5 @@
 _________________________________________________________________________________________________________________________________________________
-Final NFL 2020 through games of 2021 February 7 Sunday - SUPER BOWL - Final Ratings                                                             
+Final NFL 2020 through games of 2021 February 7 Sunday - Week 6                                                                
                                 RATING    W   L   T  SCHEDL(RANK) VS top 10 | VS top 16 |  PREDICTOR   | GOLDEN_MEAN  |  RECENT    
                 HOME ADVANTAGE=[  0.36]                                                   [  0.36]       [  0.38]       [  0.36]
    1  Tampa Bay Buccaneers    =  28.30   15   5   0   21.23(   6)   4  4  0 |   5  4  0 |   28.03    1 |   27.44    2 |   30.82    1  (NFC SOUTH)
@@ -12,7 +12,7 @@ Final NFL 2020 through games of 2021 February 7 Sunday - SUPER BOWL - Final Rati
    8  Los Angeles Rams        =  23.39   11   7   0   20.80(   9)   3  3  0 |   5  6  0 |   23.82    7 |   23.19    9 |   23.12    8  (NFC WEST)
    9  Indianapolis Colts      =  22.27   11   6   0   18.30(  32)   1  3  0 |   2  5  0 |   22.56   10 |   22.13   10 |   22.09   11  (afc south)
   10  Pittsburgh Steelers     =  21.93   12   5   0   19.03(  31)   3  1  0 |   5  3  0 |   23.38    9 |   23.24    8 |   19.15   18  (afc north)
-Final NFL 2020 through games of 2021 February 7 Sunday - SUPER BOWL - Final Ratings                                                             
+Final NFL 2020 through games of 2021 February 7 Sunday - Week 6                                                                  
                                 RATING    W   L   T  SCHEDL(RANK) VS top 10 | VS top 16 |  PREDICTOR   | GOLDEN_MEAN  |  RECENT    
                 HOME ADVANTAGE=[  0.36]                                                   [  0.36]       [  0.38]       [  0.36]
   11  Miami Dolphins          =  21.13   10   6   0   19.52(  25)   1  4  0 |   4  4  0 |   20.94   13 |   20.37   14 |   22.30   10  (afc east)
@@ -25,7 +25,7 @@ Final NFL 2020 through games of 2021 February 7 Sunday - SUPER BOWL - Final Rati
   18  Atlanta Falcons         =  19.20    4  12   0   21.63(   1)   0  7  0 |   0  8  0 |   19.16   17 |   18.55   20 |   19.97   14  (NFC SOUTH)
   19  Chicago Bears           =  18.94    8   9   0   20.29(  15)   1  6  0 |   1  7  0 |   18.86   20 |   18.81   19 |   19.17   17  (NFC NORTH)
   20  Las Vegas Raiders       =  18.81    8   8   0   21.36(   5)   2  4  0 |   4  6  0 |   18.91   19 |   19.55   17 |   17.77   24  (afc west)
-Final NFL 2020 through games of 2021 February 7 Sunday - SUPER BOWL - Final Ratings                                                             
+Final NFL 2020 through games of 2021 February 7 Sunday - Week 6                                                                  
                                 RATING    W   L   T  SCHEDL(RANK) VS top 10 | VS top 16 |  PREDICTOR   | GOLDEN_MEAN  |  RECENT    
                 HOME ADVANTAGE=[  0.36]                                                   [  0.36]       [  0.38]       [  0.36]
   21  Minnesota Vikings       =  18.61    7   9   0   19.99(  18)   1  5  0 |   1  6  0 |   18.95   18 |   19.11   18 |   17.56   25  (NFC NORTH)
@@ -38,7 +38,7 @@ Final NFL 2020 through games of 2021 February 7 Sunday - SUPER BOWL - Final Rati
   28  Houston Texans          =  15.21    4  12   0   19.72(  23)   0  6  0 |   0  9  0 |   16.09   28 |   15.47   28 |   13.37   31  (afc south)
   29  Cincinnati Bengals      =  14.87    4  11   1   19.78(  21)   1  4  0 |   2  8  0 |   13.96   30 |   14.42   30 |   16.11   27  (afc north)
   30  Detroit Lions           =  14.29    5  11   0   20.31(  14)   0  5  0 |   1  6  0 |   14.37   29 |   14.68   29 |   13.63   30  (NFC NORTH)
-Final NFL 2020 through games of 2021 February 7 Sunday - SUPER BOWL - Final Ratings                                                             
+Final NFL 2020 through games of 2021 February 7 Sunday - Week 6                                                                  
                                 RATING    W   L   T  SCHEDL(RANK) VS top 10 | VS top 16 |  PREDICTOR   | GOLDEN_MEAN  |  RECENT    
                 HOME ADVANTAGE=[  0.36]                                                   [  0.36]       [  0.38]       [  0.36]
   31  New York Jets           =  13.00    2  14   0   21.62(   2)   1  5  0 |   2 10  0 |   11.57   31 |   12.42   31 |   14.50   29  (afc east)
