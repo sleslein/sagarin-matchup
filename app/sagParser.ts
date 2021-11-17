@@ -12,7 +12,7 @@ export function isWeekLine(text: string): boolean {
 
 function parseWeekLine(text: string): number {
   const weekLocation = text.indexOf("- Week ");
-  const value = text.substring(weekLocation+7);
+  const value = text.substring(weekLocation + 7);
   return parseInt(value, 10);
 }
 
@@ -96,10 +96,10 @@ export function parseSagRatings(text: string): WeeklyRatings {
   };
 
   records.forEach((r) => {
-    if(isWeekLine(r)) {
+    if (isWeekLine(r)) {
       result.week = parseWeekLine(r);
     }
-    
+
     if (isAdvLine(r)) {
       result.homeAdvantage = parseToRatings(r);
       return;
@@ -124,5 +124,5 @@ export const sagParser = {
   parseToRatings,
   parseSagRatings,
   parseToDivisionName,
-  parseWeekLine
+  parseWeekLine,
 };

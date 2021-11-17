@@ -12,12 +12,12 @@ const teamLineText =
 const homeAdvLineText =
   "                HOME ADVANTAGE=[  2.49]                                                   [  2.49]       [  2.49]       [  2.49]";
 
-  const weekLine = "NFL 2021 through games of 2021 October 18 Monday - Week 6";
+const weekLine = "NFL 2021 through games of 2021 October 18 Monday - Week 6";
 
 Deno.test("isWeekLine", () => {
   const result = sagParser.isWeekLine(weekLine);
   assert(result === true);
-})
+});
 
 Deno.test("parseWeekLine", () => {
   const result = sagParser.parseWeekLine(weekLine);
