@@ -1,7 +1,6 @@
 # Overview
 
-This app pulls html data for football teams and uses it to predict which team
-will win.
+This app pulls html data for football teams from the Sagarin NFL Ratings and uses it to predict which team will win for any given week.
 
 ## Quick Start
 
@@ -21,10 +20,19 @@ Assuming you've installed [Deno](https://deno.land/#installation) already, you c
 deno run --allow-net --allow-read app/main.ts -w 11
 ```
 
+#### Logging results to file
+
+The results can also be written to a file with the `-l` and/or `-v` flags.  When doing so, also pass the `--allow-write` flag into deno.  The `-v` flag will write the filename and location to the console.
+
+```sh
+deno run --allow-net --allow-read --allow-write app/main.ts -w 11 -l -v
+```
+
 ## Todos
 
 - [x] Update Readme
 - [ ] Build web interface
-- [ ] Document CLI interface
+- [x] Document CLI interface
 
 ## CLI interface
+
