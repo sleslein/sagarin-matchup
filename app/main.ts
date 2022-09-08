@@ -56,7 +56,7 @@ function createPredictions(
 
     const awayRatings = ratings.teamRatings.find((x) => x.teamName === g.away);
     if (!awayRatings) {
-      throw new Error(`unable to find ratings for ${g.home}`);
+      throw new Error(`unable to find ratings for ${g.away}`);
     }
 
     const calcScore = (homeRatings?.ratings.avg + ratings.homeAdvantage.avg) -

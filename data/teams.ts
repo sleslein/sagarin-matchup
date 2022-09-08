@@ -30,7 +30,7 @@ export const teamList = [
   "Seattle Seahawks",
   "Tampa Bay Buccaneers",
   "Tennessee Titans",
-  "Washington Redskins",
+  "Washington Commanders",
 ];
 
 export const TeamNameMap = new Map<string, string>([
@@ -65,5 +65,5 @@ export const TeamNameMap = new Map<string, string>([
   ["Seattle Seahawks", "SEA"],
   ["Tampa Bay Buccaneers", "TB"],
   ["Tennessee Titans", "TEN"],
-  ["Washington Redskins", "WSH"],
+  ["Washington Commanders", "WSH"],
 ]);
