@@ -17,7 +17,8 @@ deno run --allow-net --allow-write app/scrapeSchedule.ts
 Assuming you've installed [Deno](https://deno.land/#installation) already, you can the following command to run generate the picks.
 
 ```sh
-deno run --allow-net --allow-read app/main.ts -w 11
+cd cmd
+deno run --allow-net --allow-read mod.ts -w 11
 ```
 
 #### Logging results to file
