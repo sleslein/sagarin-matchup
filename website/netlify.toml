@@ -1,0 +1,12 @@
+[build]
+    edge_functions = "edge-function"
+    base = "website"
+
+[dev]
+    port = 8888
+    targetPort = 3000
+    autoLaunch = false
+
+[[edge_functions]]
+    path = "/api"
+    function = "api"
