@@ -1,0 +1,13 @@
+---
+import Team from "../components/Team.astro"
+const { game } = Astro.props
+---
+<style>
+    p { 
+        display: grid;
+        grid-template-columns: 3rem fix-content 3rem 3rem;
+    }
+</style>
+<li>
+    <Team teamName={game.away} predictedWinner={game.calcScore < 0} /> <span>@</span> <Team teamName={game.home} predictedWinner={game.calcScore >= 0} /> <span>{game.calcScore}</span>
+</li>

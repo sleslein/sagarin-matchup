@@ -1,0 +1,34 @@
+---
+import GamePrediction from "../components/GamePrediction.astro";
+const url = new URL(Astro.request.url);
+const week = url.searchParams.get('week') ?? 1;
+let data = undefined;
+try {
+	const response = await fetch(`http://localhost:8888/api?week=${week}`);
+	data = await response.json();
+} catch {
+	data =[];
+}
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<h1>Sag Ratings</h1>
+		<p>WEEK: {week}</p>
+
+		<ul>
+			{data.map((game) => {
+				return <GamePrediction game={game} />
+			})}
+		</ul>
+
+		{JSON.stringify(data)}
+	</body>
+</html>
