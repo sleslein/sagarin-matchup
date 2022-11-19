@@ -1,5 +1,6 @@
 [build]
     edge_functions = "edge-function"
+    base = "website"
 
 [dev]
     port = 8888
