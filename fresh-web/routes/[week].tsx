@@ -16,7 +16,7 @@ export const handler: Handlers<GamePrediction[]> = {
 
 export default function Week(props: PageProps) {
   return (
-    <PageLayout>
+    <PageLayout activeWeek={parseInt(props.params.week)}>
       <GamePredictions week={props.params.week} games={props.data} />      
     </PageLayout>
   );

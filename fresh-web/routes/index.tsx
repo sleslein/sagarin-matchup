@@ -1,4 +1,3 @@
-import { Head } from "$fresh/runtime.ts";
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { main as sagApp } from "../../app/main.ts"; 
 import { GamePrediction } from "../../app/types/GamePrediction.ts"; 
@@ -16,15 +15,7 @@ export const handler: Handlers<GamePrediction[]> = {
 
 export default function Home({ data }: PageProps<GamePrediction[]>) {
   return (
-    // <>
-    //   <Head>
-    //     <title>Fresh App 3 </title>
-    //   </Head>
-    //   <div class="p-4 mx-auto max-w-screen-md">
-    //     <GamePredictions week={1} games={data} />     
-    //   </div>
-    // </>
-    <PageLayout>
+    <PageLayout activeWeek={1}>
       <GamePredictions week={1} games={data} />
     </PageLayout>
   );
