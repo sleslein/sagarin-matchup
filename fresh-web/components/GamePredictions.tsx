@@ -10,7 +10,7 @@ export interface GamePredictionProps {
 export default function GamePredictions({ week, games}: GamePredictionProps) {
     return (
         <>
-            <h1 class="text-3xl">Week {week}</h1>
+            <h1 class="text-3xl hidden h-0">Week {week}</h1>
             <ul class="flex flex-col gap-5">
                 <GameContainer className="border-b-2 font-bold">
                     <GameCell>Home</GameCell> 
@@ -38,7 +38,7 @@ function Game({ game }: { game: GamePrediction }){
                 {game.home} ({game.homeRatings.avg})
             </GameCell>
             <GameCell>
-                {game.predictedWinner} - {game.calcScore.toFixed(2)}
+                {game.predictedWinner} ({game.calcScore.toFixed(2)})
             </GameCell>
         </GameContainer>
     );
@@ -49,6 +49,6 @@ function GameContainer({children, className}: { className:string | undefined; ch
 }
 
 function GameCell({ isWinner, children}: { isWinner: boolean; children: Preact.Node }){
-    const classNames = ['text-center py-0.5 px-2 rounded-md', isWinner ? 'font-bold bg-green-100' : undefined];
+    const classNames = ['text-center py-0.5 px-1 rounded-md', isWinner ? 'font-bold bg-green-100' : undefined];
     return <span class={classNames.join(" ")}>{children}</span>
 }
