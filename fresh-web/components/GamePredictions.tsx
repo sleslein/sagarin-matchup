@@ -1,5 +1,7 @@
 import { GamePrediction } from "../../app/types/GamePrediction.ts";
 import { Game } from "../../app/types/Game.ts";
+import Card from "../components/Card.tsx";
+import WeekSelection from "../islands/WeekSelection.tsx";
 
 
 export interface GamePredictionProps {
@@ -8,9 +10,11 @@ export interface GamePredictionProps {
 }
 
 export default function GamePredictions({ week, games}: GamePredictionProps) {
+    
     return (
-        <>
+        <Card className="max-w-md mx-auto">
             <h1 class="text-3xl hidden h-0">Week {week}</h1>
+            <WeekSelection value={week} />
             <ul class="flex flex-col gap-5">
                 <GameContainer className="border-b-2 font-bold">
                     <GameCell>Home</GameCell> 
@@ -23,7 +27,7 @@ export default function GamePredictions({ week, games}: GamePredictionProps) {
                     return <Game game={game} />
                 })}
             </ul>
-        </>
+        </Card>
     );
 }
 
