@@ -10,13 +10,14 @@ export interface GamePredictionProps {
 }
 
 export default function GamePredictions({ week, games}: GamePredictionProps) {
-    
+    let pts = games.length + 1; // Add one extra to account for decrement in map below
     return (
         <Card className="max-w-md mx-auto">
             <h1 class="text-3xl hidden h-0">Week {week}</h1>
             <WeekSelection value={week} />
             <ul class="flex flex-col gap-5">
                 <GameContainer className="border-b-2 font-bold">
+                    <GameCell>Pts</GameCell> 
                     <GameCell>Home</GameCell> 
                     <span>@</span> 
                     <GameCell>Away</GameCell>
@@ -24,7 +25,8 @@ export default function GamePredictions({ week, games}: GamePredictionProps) {
                 </GameContainer>
 
                 {games.map((game: GamePrediction) => {
-                    return <Game game={game} />
+                    pts -= 1; // decrement pts
+                    return <Game game={game} pts={pts} />
                 })}
             </ul>
         </Card>
@@ -32,11 +34,12 @@ export default function GamePredictions({ week, games}: GamePredictionProps) {
 }
 
 
-function Game({ game }: { game: GamePrediction }){
+function Game({ game, pts }: { game: GamePrediction, pts: number }){
     const awayWinner = game.calcScore < 0;
     return (
         <GameContainer>
-            <GameCell isWinner={awayWinner}>{game.away}({game.awayRatings.avg})</GameCell> 
+            <GameCell>{pts}</GameCell> 
+            <GameCell isWinner={awayWinner}>{game.away} ({game.awayRatings.avg})</GameCell> 
             <span>@</span> 
             <GameCell isWinner={!awayWinner}>
                 {game.home} ({game.homeRatings.avg})
@@ -49,10 +52,10 @@ function Game({ game }: { game: GamePrediction }){
 }
 
 function GameContainer({children, className}: { className:string | undefined; children: Preact.Node; }) {
-    return <li class={`grid grid-cols-game-grid gap-5 justify-items-stretch ${className}`}>{children}</li>
+    return <li class={`grid grid-cols-game-grid gap-5 justify-items-stretch items-center ${className}`}>{children}</li>
 }
 
-function GameCell({ isWinner, children}: { isWinner: boolean; children: Preact.Node }){
+function GameCell({ isWinner, children }: { isWinner: boolean; children: Preact.Node }){
     const classNames = ['text-center py-0.5 px-1 rounded-md', isWinner ? 'font-bold bg-green-100' : undefined];
     return <span class={classNames.join(" ")}>{children}</span>
 }

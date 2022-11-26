@@ -3,7 +3,6 @@ import { main as sagApp } from "../../app/main.ts";
 import { GamePrediction } from "../../app/types/GamePrediction.ts"; 
 import GamePredictions from "../components/GamePredictions.tsx";
 import PageLayout from "../components/PageLayout.tsx";
-import WeeklyNav from "../components/WeeklyNav.tsx";
 
 
 export const handler: Handlers<GamePrediction[]> = {
@@ -19,7 +18,6 @@ export const handler: Handlers<GamePrediction[]> = {
 export default function Week(props: PageProps) {
   return (
     <PageLayout activePage="test">
-      {/* <WeeklyNav activeWeek={props.data.week} /> */}
       <GamePredictions week={props.params.week} games={props.data.games} />      
     </PageLayout>
   );

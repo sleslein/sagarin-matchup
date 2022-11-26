@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       gridTemplateColumns: {
-        'game-grid': '1fr auto 1fr 1fr'
+        'game-grid': 'auto 1fr auto 1fr 1fr'
       }
     }
   }
