@@ -1,11 +1,12 @@
 [build]
-    edge_functions = "edge-function"
-    base = "website"
+    edge_functions = "website/edge-function"
+    command = "npm run build"
 
 [dev]
     port = 8888
     targetPort = 3000
     autoLaunch = false
+    command = "npm run dev"
 
 [[edge_functions]]
     path = "/api"
