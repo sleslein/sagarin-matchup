@@ -11,6 +11,7 @@
     "astro": "astro --root ./website"
   },
   "dependencies": {
+    "@astrojs/netlify": "^1.2.1",
     "astro": "^1.6.0"
   }
 }
