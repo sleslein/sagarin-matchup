@@ -10,8 +10,9 @@ async function loadSchedule(verbose?: boolean): Promise<WeeklySchedule[]> {
   try {
     // const json = await Deno.readTextFile("../data/schedule.json");
     // const schedule = JSON.parse(json) as WeeklySchedule[];
-    const json = await fetch("data/schedule.json");
-    const schedule = await json.json() as WeeklySchedule[];
+    //const json = await fetch("http://localhost:8888/data/schedule.json");
+    const response = await fetch(new URL("../data/schedule.json", import.meta.url));
+    const schedule = await response.json() as WeeklySchedule[];
 
     if (verbose) {
       console.info(`Loaded Schedule! ${schedule.length} weeks`);
