@@ -1,5 +1,7 @@
 # Overview
 
+[![Made with Fresh](https://fresh.deno.dev/fresh-badge.svg)](https://fresh.deno.dev)
+
 This app pulls html data for football teams from the Sagarin NFL Ratings and uses it to predict which team will win for any given week.
 
 ## Quick Start
