@@ -39,13 +39,16 @@ function Game({ game, pts }: { game: GamePrediction, pts: number }){
     return (
         <GameContainer>
             <GameCell>{pts}</GameCell> 
-            <GameCell isWinner={awayWinner}>{game.away} ({game.awayRatings.avg})</GameCell> 
+            <GameCell isWinner={awayWinner}>
+                <TeamDisplay teamName={game.away} rating={game.awayRatings.avg} />
+            </GameCell> 
             <span>@</span> 
             <GameCell isWinner={!awayWinner}>
-                {game.home} ({game.homeRatings.avg})
+                <TeamDisplay teamName={game.home} rating={game.homeRatings.avg} />
+
             </GameCell>
             <GameCell>
-                {game.predictedWinner} ({game.calcScore.toFixed(2)})
+                <TeamDisplay teamName={game.predictedWinner} rating={Math.abs(game.calcScore.toFixed(2))} />
             </GameCell>
         </GameContainer>
     );
@@ -56,6 +59,14 @@ function GameContainer({children, className}: { className:string | undefined; ch
 }
 
 function GameCell({ isWinner, children }: { isWinner: boolean; children: Preact.Node }){
-    const classNames = ['text-center py-0.5 px-1 rounded-md', isWinner ? 'font-bold bg-green-100' : undefined];
+    const classNames = ['flex flex-col text-center py-0.5 px-1 rounded-md', isWinner ? 'font-bold bg-green-100' : undefined];
     return <span class={classNames.join(" ")}>{children}</span>
+}
+
+function TeamDisplay({ teamName, rating}: { teamName: string; rating: number }) {
+    return (
+        <>
+            <span>{teamName}</span> <span class="text-xs font-normal italic">{rating}</span>
+        </>
+    )
 }

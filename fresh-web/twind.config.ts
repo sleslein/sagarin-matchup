@@ -6,6 +6,9 @@ export default {
     extend: {
       gridTemplateColumns: {
         'game-grid': 'auto 1fr auto 1fr 1fr'
+      },
+      gridTemplateRows: {
+        layout: 'min-content auto min-content'
       }
     }
   }

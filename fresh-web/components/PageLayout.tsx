@@ -1,13 +1,15 @@
 import { Head } from "$fresh/runtime.ts";
+import { Link } from "./Link.tsx";
+
 
 export default function ({ activePage, children }: { activePage: string; children: Preact.Node }) {
    return(
-    <body class="bg-gray-100">
+    <body class="bg-gray-100 grid grid-cols-1 grid-rows-layout min-h-screen">
         <Head>
             <title>Sagarin Matchup</title>
         </Head>
         <Header activePage={activePage} />
-        <main class="p-4">
+        <main class="p-4 flex-grow">
             {children}    
         </main>
         <Footer />
@@ -39,11 +41,7 @@ function Footer() {
     return (
         <footer class="bg-white p-3 border border-t-grey-300">
             <div class="mx-auto max-w-min">
-                <a 
-                    target="_blank" 
-                    href="https://github.com/sleslein/sagarin-matchup"
-                    class="hover:underline"
-                    >Source</a>
+                <Link href="https://github.com/sleslein/sagarin-matchup">Source</Link>
             </div>
         </footer>
     )
