@@ -34,8 +34,11 @@ deno run --allow-net --allow-read --allow-write app/main.ts -w 11 -l -v
 ## Todos
 
 - [x] Update Readme
-- [ ] Build web interface
+- [x] Build web interface
 - [x] Document CLI interface
 
 ## CLI interface
 
+## Attribution
+
+Favicon provided by Squid Ink at [Icon Archive](https://iconarchive.com/show/free-flat-sample-icons-by-thesquid.ink/football-icon.html)
