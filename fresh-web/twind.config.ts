@@ -5,11 +5,11 @@ export default {
   theme: {
     extend: {
       gridTemplateColumns: {
-        'game-grid': 'auto 1fr auto 1fr 1fr'
+        "game-grid": "auto 1fr auto 1fr 1fr",
       },
       gridTemplateRows: {
-        layout: 'min-content auto min-content'
-      }
-    }
-  }
+        layout: "min-content auto min-content",
+      },
+    },
+  },
 } as Options;

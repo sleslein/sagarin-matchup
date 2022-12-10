@@ -1,6 +1,6 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
-import { main as sagApp } from "../../app/main.ts"; 
-import { GamePrediction } from "../../app/types/GamePrediction.ts"; 
+import { main as sagApp } from "../../app/main.ts";
+import { GamePrediction } from "../../app/types/GamePrediction.ts";
 import GamePredictions from "../components/GamePredictions.tsx";
 import PageLayout from "../components/PageLayout.tsx";
 

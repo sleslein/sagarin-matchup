@@ -1,16 +1,15 @@
 import { fetchSagRatings } from "./sag-scraper.ts";
 import { parseSagRatings } from "./sagParser.ts";
-import { AutoPickArgs } from "./types/AutoPickArgs.ts"
+import { AutoPickArgs } from "./types/AutoPickArgs.ts";
 import { GamePrediction } from "./types/GamePrediction.ts";
 import { WeeklyRatings } from "./types/SagarinRatings.ts";
 import { WeeklySchedule } from "./types/WeeklySchedule.ts";
 
-
 async function loadSchedule(verbose?: boolean): Promise<WeeklySchedule[]> {
   try {
-    // const json = await Deno.readTextFile("../data/schedule.json");
-    // const schedule = JSON.parse(json) as WeeklySchedule[];
-    const response = await fetch(new URL("../data/schedule.json", import.meta.url));
+    const response = await fetch(
+      new URL("../data/schedule.json", import.meta.url),
+    );
     const schedule = await response.json() as WeeklySchedule[];
 
     if (verbose) {
@@ -82,7 +81,7 @@ export async function main(args: AutoPickArgs): Promise<GamePrediction[]> {
   if (log) {
     const ratingsJson = JSON.stringify(ratings);
     const ratingsFileName = `../data/sag-ratings-${week}.json`;
-    
+
     await Deno.writeTextFile(ratingsFileName, ratingsJson);
     console.info(`Saved Ratings Content: ${ratingsFileName}`);
   }

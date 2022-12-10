@@ -1,23 +1,23 @@
 import { parse } from "https://deno.land/std@0.108.0/flags/mod.ts";
 import { brightGreen as hightlight } from "https://deno.land/std@0.110.0/fmt/colors.ts";
 import { GamePrediction } from "../app/types/GamePrediction.ts";
-import { main } from "../app/main.ts"
+import { main } from "../app/main.ts";
 
 function outputPredictions(predictions: GamePrediction[]): void {
-    console.log(`PTS AWAY @ HOME SCORE`);
-    console.log(`--- ---- @ ---- -----`);
-  
-    predictions.forEach((x, idx) => {
-      const pts = (predictions.length - idx).toString().padEnd(3, " ");
-      const away = x.away.padEnd(4, " ");
-      const home = x.home.padEnd(4, " ");
-      if (x.predictedWinner === x.home) {
-        console.log(`${pts} ${away} @ ${hightlight(home)} ${x.calcScore}`);
-      } else {
-        console.log(`${pts} ${hightlight(away)} @ ${home} ${x.calcScore}`);
-      }
-    });
-  }
+  console.log(`PTS AWAY @ HOME SCORE`);
+  console.log(`--- ---- @ ---- -----`);
+
+  predictions.forEach((x, idx) => {
+    const pts = (predictions.length - idx).toString().padEnd(3, " ");
+    const away = x.away.padEnd(4, " ");
+    const home = x.home.padEnd(4, " ");
+    if (x.predictedWinner === x.home) {
+      console.log(`${pts} ${away} @ ${hightlight(home)} ${x.calcScore}`);
+    } else {
+      console.log(`${pts} ${hightlight(away)} @ ${home} ${x.calcScore}`);
+    }
+  });
+}
 
 try {
   const args = parse(Deno.args, {
