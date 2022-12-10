@@ -2,7 +2,10 @@ import { Head } from "$fresh/runtime.ts";
 import { Link } from "./Link.tsx";
 
 export default function (
-  { activePage, children }: { activePage: string; children: Preact.Node },
+  { activePage, children }: {
+    activePage: string;
+    children: preact.ComponentChildren;
+  },
 ) {
   return (
     <body class="bg-gray-100 grid grid-cols-1 grid-rows-layout min-h-screen">
@@ -34,8 +37,8 @@ function NavItem(
   { active, children, className, href }: {
     active: boolean;
     href: string;
-    children: Preact.Node;
-    className: string;
+    children: preact.ComponentChildren;
+    className?: string;
   },
 ) {
   const baseClass = "py-1 px-1 rounded-full sm:px-5";

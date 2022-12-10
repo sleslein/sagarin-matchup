@@ -35,6 +35,6 @@ export default function About() {
   );
 }
 
-function Paragraph({ children }) {
+function Paragraph({ children }: { children: preact.ComponentChildren }) {
   return <p class="mb-4 last:mb-0">{children}</p>;
 }

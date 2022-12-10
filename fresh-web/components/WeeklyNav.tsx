@@ -20,7 +20,7 @@ function WeeklyNavItem({ week, active }: { week: number; active: boolean }) {
 
   return (
     <li class={className}>
-      <a href={week}>Week {week}</a>
+      <a href={week.toString()}>Week {week}</a>
     </li>
   );
 }

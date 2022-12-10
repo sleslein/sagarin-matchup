@@ -4,7 +4,12 @@ import { GamePrediction } from "../../app/types/GamePrediction.ts";
 import GamePredictions from "../components/GamePredictions.tsx";
 import PageLayout from "../components/PageLayout.tsx";
 
-export const handler: Handlers<GamePrediction[]> = {
+interface Props {
+  week: number;
+  games: GamePrediction[];
+}
+
+export const handler: Handlers<Props> = {
   async GET(_, ctx) {
     const { week } = ctx.params;
     const intWeek = parseInt(week);
@@ -14,10 +19,10 @@ export const handler: Handlers<GamePrediction[]> = {
   },
 };
 
-export default function Week(props: PageProps) {
+export default function Week(props: PageProps<Props>) {
   return (
     <PageLayout activePage="test">
-      <GamePredictions week={props.params.week} games={props.data.games} />
+      <GamePredictions week={props.data.week} games={props.data.games} />
     </PageLayout>
   );
 }
