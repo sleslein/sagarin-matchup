@@ -9,20 +9,20 @@ export default function About() {
         <h1 class="hidden">About!</h1>
         <Paragraph>
           For years Jeff Sagarin's NFL ratings have been a staple for predicting
-          the outcomes of NFL games. Simplicity is one of the rating systems
-          greatest features. Using the system is a simple as subtracting the
+          the outcomes of NFL games. Simplicity is one of the rating system's
+          greatest features. Using the system is as simple as subtracting the
           away team's rating from the total of the home team's rating plus the
           home field advantage value.
         </Paragraph>
         <Paragraph>
-          For example, if the home field advatnage is 2 points and home team's
-          rating is 25, their total rating would be 27. If the away team's
-          rating is 24, then the home team would be favored by 3.
+          For example, if the home-field advantage is 2 points and the home
+          team's rating is 25, their total rating would be 27. If the away
+          team's rating is 24, then the home team would be favored by 3.
         </Paragraph>
         <Paragraph>
           This site automatically compares the current week's Sagarin Ratings
-          agains the selected weeks NFL schedule. Winners are highlighted and
-          the games are sorted by predicted margin of victory.
+          against the selected week's NFL schedule. Winners are highlighted and
+          the games are sorted by a predicted margin of victory.
         </Paragraph>
         <Paragraph>
           All of the Sagarin Ratings can be found{" "}
