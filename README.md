@@ -13,6 +13,7 @@ A schedule file must exist before fetching ratings. To get a schedule file run
 the following command:
 
 ```sh
+cd cmd
 deno run --allow-net --allow-write app/scrapeSchedule.ts
 ```
 
@@ -33,16 +34,18 @@ doing so, also pass the `--allow-write` flag into deno. The `-v` flag will write
 the filename and location to the console.
 
 ```sh
+cd cmd
 deno run --allow-net --allow-read --allow-write app/main.ts -w 11 -l -v
 ```
 
-## Todos
+### Running the web application
 
-- [x] Update Readme
-- [x] Build web interface
-- [x] Document CLI interface
+The web application can be run locally with the following command:
 
-## CLI interface
+```
+cd fresh-web
+deno task start
+```
 
 ## Attribution
 
