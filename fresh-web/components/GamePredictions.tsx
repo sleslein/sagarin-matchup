@@ -18,9 +18,9 @@ export default function GamePredictions({ week, games }: GamePredictionProps) {
       <ul class="flex flex-col gap-5">
         <GameContainer className="border-b-2 font-bold">
           <GameCell>Pts</GameCell>
-          <GameCell>Home</GameCell>
-          <span>@</span>
           <GameCell>Away</GameCell>
+          <span>@</span>
+          <GameCell>Home</GameCell>
           <GameCell>Predicted Winner</GameCell>
         </GameContainer>
 
