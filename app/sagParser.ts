@@ -41,13 +41,13 @@ export function parseToTeamInfo(line: string): TeamInfo {
 }
 
 export function parseToTeamName(line: string): string {
-   /** NOTE: changed this to use "some" because ratings system
+  /** NOTE: changed this to use "some" because ratings system
    * started using "Washington Redskins" instead of Washington Commanders.
    * Hopefully this will add a little reslience if/when changed again.
    */
-  let teamName = line.substring(6, 29).trimEnd(); 
-  if (teamName === 'Washington Redskins') {
-    teamName = "Washington Commanders"
+  let teamName = line.substring(6, 29).trimEnd();
+  if (teamName === "Washington Redskins") {
+    teamName = "Washington Commanders";
   }
   return teamName;
 }
