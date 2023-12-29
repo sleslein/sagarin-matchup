@@ -1,0 +1,15 @@
+meta {
+  name: test
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://api.the-odds-api.com/v4/sports?apiKey={{apiKey}}
+  body: none
+  auth: none
+}
+
+query {
+  apiKey: {{apiKey}}
+}

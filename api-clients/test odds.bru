@@ -1,0 +1,17 @@
+meta {
+  name: test odds
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v4/sports/americanfootball_nfl/odds?regions=us&oddsFormat=american&apiKey={{apiKey}}
+  body: none
+  auth: none
+}
+
+query {
+  regions: us
+  oddsFormat: american
+  apiKey: {{apiKey}}
+}

@@ -17,7 +17,7 @@ async function outputPredictions(predictions: GamePrediction[]): Promise<void> {
       output += `${pts} ${away} @ ${hightlight(home)} ${x.calcScore}\n\r`;
     } else {
       output += `${pts} ${hightlight(away)} @ ${home} ${x.calcScore}\n\r`;
-          }
+    }
   });
   await Deno.stdout.write(new TextEncoder().encode(output));
 }
@@ -35,7 +35,9 @@ try {
     await Deno.writeTextFile(predictionsFileName, predictionsJson);
 
     if (args.verbose) {
-      await Deno.stdout.write(new TextEncoder().encode(`Saved predictions: ${predictionsFileName}`));
+      await Deno.stdout.write(
+        new TextEncoder().encode(`Saved predictions: ${predictionsFileName}`),
+      );
     }
   }
 
