@@ -47,6 +47,13 @@ cd fresh-web
 deno task start
 ```
 
+## Moneyline
+
+```
+cd cmd
+deno run --allow-net --allow-read --allow-env money-line.ts -w 17
+```
+
 ## Attribution
 
 Favicon provided by Squid Ink at
