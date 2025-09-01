@@ -1,0 +1,9 @@
+{
+  "name": "football-pick-cli",
+  "version": "0.1.0",
+  "exports": "./mod.ts",
+  "imports": {
+    "@std/flags": "jsr:@std/flags@0.108.0",
+    "@std/fmt": "jsr:@std/fmt@0.110.0"
+  }
+}

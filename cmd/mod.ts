@@ -1,5 +1,5 @@
-import { parse } from "https://deno.land/std@0.108.0/flags/mod.ts";
-import { brightGreen as hightlight } from "https://deno.land/std@0.110.0/fmt/colors.ts";
+import { parse } from "@std/flags";
+import { brightGreen as hightlight } from "@std/fmt/colors";
 import { GamePrediction } from "../app/types/GamePrediction.ts";
 import { main } from "../app/main.ts";
 import { AutoPickArgs } from "../app/types/AutoPickArgs.ts";

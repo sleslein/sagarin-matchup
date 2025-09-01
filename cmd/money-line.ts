@@ -1,4 +1,4 @@
-import { parse } from "https://deno.land/std@0.108.0/flags/mod.ts";
+import { parse } from "@std/flags";
 import { main } from "../app/money-line.ts";
 import { AutoPickArgs } from "../app/types/AutoPickArgs.ts";
 
