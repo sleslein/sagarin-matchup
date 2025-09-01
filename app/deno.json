@@ -1,0 +1,28 @@
+{
+  "name": "football-pick-app",
+  "version": "0.1.0",
+  "exports": {
+    "./scrapeSchedule.ts": "./scrapeSchedule.ts",
+    "./types/SagarinRatings.ts": "./types/SagarinRatings.ts",
+    "./types/WeeklySchedule.ts": "./types/WeeklySchedule.ts",
+    "./types/AutoPickArgs.ts": "./types/AutoPickArgs.ts",
+    "./types/TeamRecord.ts": "./types/TeamRecord.ts",
+    "./types/TeamInfo.ts": "./types/TeamInfo.ts",
+    "./types/GamePrediction.ts": "./types/GamePrediction.ts",
+    "./types/Game.ts": "./types/Game.ts",
+    "./types/index.ts": "./types/index.ts",
+    "./types/TeamRatings.ts": "./types/TeamRatings.ts",
+    "./types/TeamSchedule.ts": "./types/TeamSchedule.ts",
+    "./main.ts": "./main.ts",
+    "./sag-scraper.ts": "./sag-scraper.ts",
+    "./__tests__/sagParser.test.ts": "./__tests__/sagParser.test.ts",
+    "./sagParser.ts": "./sagParser.ts",
+    "./money-line.ts": "./money-line.ts"
+  },
+  "imports": {
+    "cheerio/": "https://deno.land/x/cheerio@1.0.7/",
+    "@std/testing": "jsr:@std/testing@0.106.0",
+    "@std/dotenv": "jsr:@std/dotenv@0.210.0",
+    "@std/fmt": "jsr:@std/fmt@0.110.0"
+  }
+}

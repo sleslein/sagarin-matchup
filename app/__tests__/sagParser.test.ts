@@ -1,7 +1,7 @@
 import {
   assert,
   assertEquals,
-} from "https://deno.land/std@0.106.0/testing/asserts.ts";
+} from "@std/testing/asserts";
 import { sagParser } from "../sagParser.ts";
 import { teamList } from "../../data/teams.ts";
 import { SagarinRating, TeamRecord } from "../types/index.ts";

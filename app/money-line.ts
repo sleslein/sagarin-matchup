@@ -1,7 +1,7 @@
 /** */
 
-import { loadSync } from "https://deno.land/std@0.210.0/dotenv/mod.ts";
-import { magenta as highlight } from "https://deno.land/std@0.110.0/fmt/colors.ts";
+import { loadSync } from "@std/dotenv";
+import { magenta as highlight } from "@std/fmt/colors";
 import { AutoPickArgs } from "./types/AutoPickArgs.ts";
 
 function buildUrl(week: number) {
