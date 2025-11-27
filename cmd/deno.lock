@@ -1,0 +1,26 @@
+{
+  "version": "5",
+  "specifiers": {
+    "jsr:@std/cli@^1.0.22": "1.0.22",
+    "jsr:@std/dotenv@~0.225.5": "0.225.5",
+    "jsr:@std/fmt@^1.0.8": "1.0.8"
+  },
+  "jsr": {
+    "@std/cli@1.0.22": {
+      "integrity": "50d1e4f87887cb8a8afa29b88505ab5081188f5cad3985460c3b471fa49ff21a"
+    },
+    "@std/dotenv@0.225.5": {
+      "integrity": "9ce6f9d0ec3311f74a32535aa1b8c62ed88b1ab91b7f0815797d77a6f60c922f"
+    },
+    "@std/fmt@1.0.8": {
+      "integrity": "71e1fc498787e4434d213647a6e43e794af4fd393ef8f52062246e06f7e372b7"
+    }
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@std/cli@^1.0.22",
+      "jsr:@std/dotenv@~0.225.5",
+      "jsr:@std/fmt@^1.0.8"
+    ]
+  }
+}
